@@ -1,0 +1,146 @@
+.no-padding-right{
+  padding-right: 0 !important;
+}
+
+.no-padding-left{
+  padding-left: 0 !important;
+}
+
+/***************
+      HEADER
+***************/
+
+.head{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 60px;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.head nav a{
+  color: black;
+
+  font-weight: bold;
+  font-size: 13px;
+
+}
+
+
+/*************
+  HOME MAP
+*************/
+
+.homeMap{
+  position: relative;
+  display: table;
+
+  width: 100%;
+  height: 300px;
+
+  background-image: url('http://static.independent.co.uk/s3fs-public/thumbnails/image/2014/03/03/18/google-map.jpg');
+  background-repeat: no-repeat;
+
+  background-color: rgba(122, 74, 221, 0.83);
+}
+
+/******
+  CONTAINER
+****/
+
+.container{
+  position: relative;
+
+  margin-top: -100px;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  width: 100%;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+  background-color: white;
+}
+
+/************
+  Search Field
+*************/
+
+.search-container{
+  position: relative;
+
+  padding: 10px;
+
+  border: 1px solid yellow;
+}
+
+.mainBoldTitle{
+  position: relative;
+
+  font-weight: bold;
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 1px;
+
+  color: rgba(52, 52, 52, 0.9);
+}
+
+.searchField{
+  position: relative;
+
+  width: 100%;
+
+  padding: 10px;
+
+  display: inline-block;
+
+  color: black;
+
+  border: 1px solid rgba(52, 52, 52, 0.5);
+}
+
+.search{
+  position: relative;
+
+  color: white;
+  background-color: rgb(14, 207, 153);
+  border: none !important;
+}
+
+
+/**************
+  Popular Items
+************/
+
+.popular-container{
+  position: relative;
+
+  margin: 10px 0;
+}
+
+.popularItemContainer{
+  position: relative;
+  display: table;
+
+  width: 100%;
+  min-height: 250px;
+
+  margin-bottom: 10px;
+
+  background-image: url('http://www.hot-tub-hire-manchester.co.uk/images/hot-tub-hire-6.jpg');
+}
+
+.inner{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.popularItemCardTitle{
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitilize;
+}
