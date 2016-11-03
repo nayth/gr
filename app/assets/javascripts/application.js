@@ -14,6 +14,12 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require geocomplete
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation();
+  $("#geocomplete").geocomplete({
+    details: ".details",
+    detailsAttribute: "data-geo"
+  });
+});

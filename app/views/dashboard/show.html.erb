@@ -1,5 +1,27 @@
 <%= render('shared/header') %>
 
 <div class="row">
-  <span>Dashboard</span>
+  <div class="large-12 columns">
+    <h3>Happy <%= Time.now.strftime("%A") %>, <%= current_user.full_name %>.</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-6 columns">
+    <span>My Listings</span><br><br>
+    <% @listings.each do |listing| %>
+      <%= listing.title %><br>
+      <%= listing.description %><br>
+      <%= number_to_currency(listing.price) %><br>
+      <%= link_to 'View more information', listing_path(listing) %>
+
+      <br><br>
+    <% end %>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <%= current_user.inspect %>
 </div>

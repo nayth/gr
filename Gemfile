@@ -48,5 +48,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'foundation-rails'
 gem 'devise'
-
-ruby "2.3.1"
+gem 'geocomplete_rails'

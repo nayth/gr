@@ -1,0 +1,43 @@
+<%= render('shared/header') %>
+
+<div class="allListingsContainer">
+  <div class="large-8 columns">
+    <% @listing.each do |listing| %>
+      <div class="listingItemContainer">
+        <div class="row">
+          <div class="large-4 columns">
+            <div class="listingImageContainer">
+              <img src="http://www.calgaryhottubservice.com/images/new/serv3.jpg">
+            </div>
+          </div>
+
+          <div class="large-8 columns no-padding">
+            <div class="listingTitleContainer">
+              <div class="row">
+                <div class="large-8 columns">
+                  <span><%= link_to listing.title, listing_path(listing) %></span>
+                </div>
+
+                <div class="large-4 columns text-right">
+                  <span>£2190 - $3910</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="listingItemDescContainer">
+              <%= listing.description %>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <span>User information</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
