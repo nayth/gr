@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
+  mount_uploader :avatar, AvatarUploader
+
   ####################
   #  Relationships  #
  ###################
@@ -13,6 +15,10 @@ class User < ApplicationRecord
 
  before_create :assign_fullname
  before_create :join_lon_lat
+
+ ##################
+ ## Call Backs ###
+ ################
 
  def join_lon_lat
    self.location = lat.to_s + ',' + lng.to_s

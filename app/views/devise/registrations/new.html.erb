@@ -1,70 +1,59 @@
-<h2>Sign up</h2>
+<div class="small-row registrationContainer">
+  <div class="large-5 columns">
+    <div class="row">
+      <div class="large-12 columns">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+          <div class="field">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true %>
+          </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+          <div class="field">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+          </div>
+
+
+          <div class="field">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :avatar %>
+            <%= f.file_field :avatar %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Sign up" %>
+          </div>
+
+          <%= render "devise/shared/links" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-
-<%= render "devise/shared/links" %>
-
-<div class="row">
-  <div class="large-6 columns">
-    <form>
-      <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
-      <input id="find" type="button" value="find" />
-    </form>
-  </div>
-
-  <div class="details">
-    <%= f.label :lng %>
-    <%= f.text_field :lng, data: {geo: 'lng'} %>
-
-    <%= f.label :lat %>
-    <%= f.text_field :lat, data: {geo: 'lat'} %>
-
-    <%= f.label :street_address %>
-    <%= f.text_field :street_address, data: {geo: 'name'} %>
-
-    <%= f.label :postal_code %>
-    <%= f.text_field :postal_code, data: {geo: 'postal_code'} %>
-
-    <%= f.label :town_city %>
-    <%= f.text_field :town_city, data: {geo: 'locality'}  %>
-
-    <%= f.label :street_number %>
-    <%= f.text_field :street_number, data: {geo: 'street_number'} %>
+  <div class="large-7 columns" style="height: 100%; background-color: #6BB1B3; ">
+    <div class="row">
+      <div class="large-12 columns text-center">
+        <span>Sign Up</span>
+      </div>
+    </div>
   </div>
 </div>
-
-<% end %>

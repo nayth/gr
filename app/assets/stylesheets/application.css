@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
 
-    background-color: #FFFFF4;
+    background-color: #f5f8fa;
     /*background-color: rgba(52, 52, 52, 0.89);*/
  }
 
@@ -40,6 +40,21 @@
   max-width: 70rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* SIGN UP & LOGIN */
+
+.registrationContainer{
+  position: relative;
+
+  width: 100%;
+  height: 600px;
+
+  margin: 50px auto;
+
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 
 
@@ -88,4 +103,15 @@
 
 .dropdown:hover .dropdown-content{
   display: block;
+}
+
+.createListingButton{
+  position: relative;
+
+  padding: 10px 20px !important;
+
+  border: 2px solid #6BB1B3;
+  border-radius: 4px;
+
+  font-size: 13px !important;
 }

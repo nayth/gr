@@ -5,10 +5,9 @@
 
   <div class="large-6 columns text-right" style="padding-right: 0;">
     <nav>
+      <%= link_to 'CREATE LISTING', new_listing_path, class: 'createListingButton' %>
       <%= link_to 'Sign in', new_user_session_path unless user_signed_in? %>
       <%= link_to 'Sign Up', new_user_registration_path unless user_signed_in? %>
-      <a href="#">FAQ</a>
-      <a href="#">FAQ</a>
 
       <% if user_signed_in? %>
         <div class="dropdown text-center" style="height: 60px; line-height: 60px;">
